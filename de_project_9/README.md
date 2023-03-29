@@ -41,9 +41,9 @@
 Сервисы разворачивались при помощи менеджера пакетов HELM.
 
 
-[Функциональная схема работы](de_project_9/solution/Schema.png)
+[Функциональная схема работы](/de_project_9/solution/Schema.png)
 
-[ERD схема DDS слоя](de_project_9/solution/DDS-ERD.png)
+[ERD схема DDS слоя](/de_project_9/solution/DDS-ERD.png)
 
 [Дэшборд DataLens](https://datalens.yandex/tvkkdnieb556j)
 
