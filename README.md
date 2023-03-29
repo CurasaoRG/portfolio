@@ -4,9 +4,9 @@
 
 Название | Описание | Стек |
 |---|---|---|
-проект 3|Проектная работа по ETL и автоматизации подготовки данных|Postgre SQL, Python, Airflow
-проект 4(5)|DWH для нескольких источников|Airflow, Postgre SQL, MongoDB
-преокт 6|Колоночные базы данных|Vertica, Airflow
-проект 7|Data lake|Spark, Hadoop
-[проект 9](/de_project_9)|Cloud|Docker, Kubernetes, Posgre SQL, Kafka, Redis
-проект финал|все сразу|все сразу
+[Автоматизация ETL](/de_project_3/)||Проектная работа по ETL и автоматизации подготовки данных|Postgre SQL, Python, Airflow
+[DWH для нескольких источников](/de_project_5/)|Автоматизированная загрузка и обработка данных из разных источников (Postgre SQL, MongoDB, API) в хранилище на Postgre SQL|Airflow, Postgre SQL, MongoDB
+[Колоночные базы данных](/de_project_6/)|Разработка хранилища данных Data Vault в Vertica|Vertica, Airflow
+[Data lake](/de_project_7/)|Проектирование и модернизация Data Lake хранилища|Spark, Hadoop
+[Работа с Yandex Cloud](/de_project_9/)|Сервисы для работы с облачным хранилищем данных|Kubernetes, Postgre SQL, Kafka, Redis
+[Data lake](/de_project_final/)|Финальный проект|Vertica, S3, Airflow 
