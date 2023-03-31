@@ -1,9 +1,5 @@
-import uuid
-from datetime import datetime
-from typing import Any, Dict, List
-
+from typing import Dict
 from lib.pg import PgConnect
-from pydantic import BaseModel
 
 class SQLscripts:
     def __init__(self):

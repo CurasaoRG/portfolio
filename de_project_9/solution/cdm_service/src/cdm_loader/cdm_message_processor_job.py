@@ -29,37 +29,6 @@ class CdmMessageProcessor:
             msg = self._consumer.consume()
             if msg:
 
-# incoming msg sctructure: {"category_name": "\u0421\u0443\u043f\u044b", 
-#                  "user_id": "c9e6fe6a-f87e-3d8b-a882-f31ddb1b23d2", 
-#                  "product_name": "\u0427\u0438\u043a\u0435\u043d \u0428\u043e\u0440\u0431\u0430", 
-#                  "category_id": "53350d4a-c113-31ae-8141-e9ff77d1e81a", 
-#                  "order_id": "c6659afb-e735-3116-bf6e-fa6d1e118d1e", 
-#                  "product_id": "1624026f-077f-31c0-8711-408a6439d9ed"}
-# -----------CDM DDL
-# CREATE SCHEMA IF NOT EXISTS cdm; 
-
-# create table if not exists cdm.user_product_counters (
-# id serial primary key, 
-# user_id uuid not null,
-# product_id uuid not null,
-# product_name varchar not null, 
-# order_cnt integer constraint order_cnt_check check(order_cnt>=0) not null
-# );
-# create unique index user_id_product_id_index on
-# cdm.user_product_counters (user_id, product_id);
-
-# drop table cdm.user_product_counters;
-
-# create table if not exists cdm.user_category_counters (
-# id serial primary key, 
-# user_id uuid not null,
-# category_id uuid not null,
-# category_name varchar not null, 
-# order_cnt integer constraint order_cnt_check check(order_cnt>=0) not null
-# );
-# create unique index user_id_category_id_index on
-# cdm.user_category_counters (user_id, category_id);
-
                 hk_user_product_pk = uuid.uuid3(uuid.NAMESPACE_OID, str(msg["user_id"])+ str(msg["product_id"]))
                 hk_user_category_pk = uuid.uuid3(uuid.NAMESPACE_OID, str(msg["user_id"])+ str(msg["category_id"]))
                 if hk_user_product_pk in product_cnt_dict.keys():
@@ -81,7 +50,6 @@ class CdmMessageProcessor:
                     }
             else:
                 break
-        # end for 
         for key in product_cnt_dict.keys():
             product_cnt_dict[key]["order_cnt"] = len(product_cnt_dict[key]["order_cnt"])
         for key in cat_count_dict.keys():
