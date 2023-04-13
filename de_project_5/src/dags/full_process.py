@@ -12,7 +12,6 @@ from pymongo import MongoClient
 from urllib.parse import quote_plus as quote
 from bson.json_util import dumps
 from bson.json_util import loads
-import psycopg2
 from airflow.models import Variable
 from dateutil import parser
 from airflow.decorators import task_group
